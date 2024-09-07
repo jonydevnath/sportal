@@ -1,0 +1,388 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUC-Student Homework | Jony Devnath</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="menuButton"><img src="{% static 'assets/list.svg' %}" alt="list"></div>
+
+    <nav id="sideMenu" class="side-menu">
+        <ul>
+            <li><a id="active" href="{% url 'home' %}">Dashboard</a></li>
+            <li><a href="{% url 'enrollment' %}">Enrollment</a></li>
+            <li><a href="#">Enrolled Courses</a></li>
+            <li><a href="#">Class Routine</a></li>
+            <li><a href="{% url 'homeworks' %}">Homeworks</a></li>
+            <li><a href="#">Course Plan</a></li>
+            <li><a href="#">My Exam Routine</a></li>
+            <li><a href="#">Detailed Result</a></li>
+            <li><a href="#">Libraries</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Student Accounts</a></li>
+            <li><a href="{% url 'login' %}">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="homework">
+        <div class="btn">
+            <button onclick="display_cover()">Cover Page</button>
+            <button onclick="display_report1()">Lab report 1</button>
+            <button onclick="display_report3()">Lab report 3</button>
+        </div>
+
+        <!-- cover page -->
+        <div id="report_cover">
+            <h2 style="border-bottom: 3px solid #247584; text-align: center; width: 21%; margin-left: 38%;">LAB
+                REPORT</h2>
+            <h3>Course Code: CSE 3210</h3>
+            <h3>Course Title : Internet Programming</h3>
+            <br>
+            <h3>Report No. : 01</h3>
+            <h3>Report Title : Creating a Facebook Page Clone using HTML and CSS.</h3>
+            <h3>Date of the Report : 24/04/2024</h3>
+            <h3>Date of the Submission : 08/05/2024</h3>
+            <br>
+            <h3>Report No. : 02</h3>
+            <h3>Report Title : Implementing JavaScript for Improved Web Application Interactivity in Student Portal</h3>
+            <h3>Date of the Report : 15/05/2024</h3>
+            <h3>Date of the Submission : 29/05/2024</h3>
+
+            <h2 id="color">Submitted By ,</h2>
+            <table style="width: 40%">
+                <tr>
+                    <td>Name : Jony Devnath</td>
+                </tr>
+                <tr>
+                    <td>ID : 0222310005101032</td>
+                </tr>
+                <tr>
+                    <td>Batch : 43rd</td>
+                </tr>
+                <tr>
+                    <td>Semester : 3rd</td>
+                </tr>
+                <tr>
+                    <td>Section : A</td>
+                </tr>
+            </table>
+
+            <h3>PREMIER UNIVERSITY CHITTAGONG</h3>
+            <h3>Department of Computer Science & Engineering</h3>
+        </div>
+        <!-- cover page -->
+
+        <!-- lab report 1 -->
+        <div id="lab_report1" style="display: none; text-align: justify; text-justify: inter-word;">
+            <div>
+                <h2 id="color">Title: Creating a Facebook Page Clone</h2>
+                <h2 id="color">Objective:</h2>
+                <p>The objective of this lab was to create a basic replica of the Facebook page interface using
+                    HTML and CSS.</p>
+
+                <h2 id="color">Materials and Tools Used:</h2>
+                <ul>
+                    <li>HTML (Hypertext Markup Language)</li>
+                    <li>CSS (Cascading Style Sheets)</li>
+                    <li>Text Editor (Visual Studio Code)</li>
+                    <li>Web Browser (Google Chrome)</li>
+                    <li>Bootstrap Icon</li>
+                    <li>Photos from pixel.com</li>
+                    <li>Google font</li>
+                </ul>
+
+                <h2 id="color">Procedure:</h2>
+                <ol>
+                    <li><strong>Understanding the Requirements:</strong> Analyzed the layout and components of
+                        the Facebook page to identify key elements such as the header, navigation bar, main
+                        content area, and footer.</li>
+                    <li><strong>Structuring the HTML:</strong> Created the basic structure of the webpage using
+                        HTML, including &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, and &lt;footer&gt;
+                        elements. Divided the content into appropriate sections.</li>
+                    <li><strong>Styling with CSS:</strong> Applied CSS styles to the HTML elements to replicate
+                        the visual appearance of the Facebook page. Utilized CSS properties such as
+                        background-color, font-family, padding, and margin to achieve the desired layout and
+                        design.</li>
+                    <li><strong>Creating Navigation:</strong> Implemented navigation links for different
+                        sections of the page, such as Home, Profile, and Messages, using HTML &lt;a&gt; tags
+                        within the navigation bar.</li>
+                    <li><strong>Designing Posts:</strong> Styled the individual posts within the main content
+                        area to resemble Facebook posts, including profile pictures, post content, likes,
+                        comments, and share buttons.</li>
+                    <li><strong>Testing and Debugging:</strong> Tested the webpage in various web browsers to
+                        ensure cross-browser compatibility. Made adjustments to the code to fix any layout or
+                        styling issues.</li>
+                </ol>
+
+                <h2 id="color">Results:</h2>
+                <p>The lab resulted in the successful creation of a basic Facebook page clone using HTML and
+                    CSS. The webpage closely resembled the layout and design of the original Facebook interface,
+                    with functional navigation and stylized post elements.</p>
+
+                <h2 id="color">Discussion:</h2>
+                <p>While the created webpage achieved the visual appearance of a Facebook page, it lacked
+                    dynamic functionalities such as user authentication, real-time updates, and interaction with
+                    a backend server. To fully replicate the functionality of Facebook, additional programming
+                    languages such as JavaScript for interactivity and server-side languages like PHP or Node.js
+                    or Django for backend processing would be required.</p>
+
+
+                <h2 id="color">Conclusion:</h2>
+                <p>Through this lab, a foundational understanding of web development using HTML and CSS was
+                    gained. Further exploration into client-side and server-side scripting will be necessary to
+                    enhance the functionality of the webpage and create a more comprehensive social media
+                    platform.</p>
+
+                <h2 id="color">References:</h2>
+                <ul>
+                    <li>W3Schools. HTML Tutorial. Retrieved from <a href="https://www.w3schools.com/html/"
+                            target="_blank">https://www.w3schools.com/html/</a></li>
+                    <li>W3Schools. CSS Tutorial. Retrieved from <a href="https://www.w3schools.com/css/"
+                            target="_blank">https://www.w3schools.com/css/</a></li>
+                </ul>
+            </div>
+
+            <img style="margin-bottom: 8px;" src="{% static 'assets/html_css.jpg' %}" alt="Html & Css">
+
+        </div>
+        <!-- lab report 1 -->
+
+        <!-- lab report 3 -->
+        <div id="lab_report3" style="display: none; text-align: justify; text-justify: inter-word;">
+            <div>
+                <h2 id="color">Title: Implementing JavaScript for Improved Web Application Interactivity in Student
+                    Portal</h2>
+
+                <h2 id="color">Objective:</h2>
+                <p>The objective of this lab was to implement JavaScript functionalities that enhance user interactivity
+                    on
+                    a web application. Specific tasks included creating dynamic behaviors such as form validation,
+                    preloader
+                    management, sidebar toggling, smooth scrolling, and toggling the display of multiple lab reports.
+                </p>
+
+                <h2 id="color">Materials and Tools Used:</h2>
+                <ul>
+                    <li>HTML (Hypertext Markup Language)</li>
+                    <li>CSS (Cascading Style Sheets)</li>
+                    <li>JavaScript</li>
+                    <li>Text Editor (Visual Studio Code)</li>
+                    <li>Web Browser (Google Chrome)</li>
+                </ul>
+
+                <h2 id="color">Procedure:</h2>
+                <ol>
+                    <li>
+                        <strong>Understanding the Requirements:</strong>
+                        Analyzed existing static web pages to identify areas where JavaScript could enhance
+                        interactivity and
+                        user experience.
+                    </li>
+                    <li>
+                        <strong>Form Validation:</strong>
+                        Implemented JavaScript to validate user input on the login form. Ensured that users entered
+                        the
+                        correct student roll and password before form submission. Incorrect inputs triggered error
+                        messages and
+                        prevented form submission.
+                    </li>
+                    <li>
+                        <strong>Preloader Management:</strong>
+                        Used JavaScript to manage the display of a preloader element, visible while the page is
+                        loading and
+                        hidden once the content has fully loaded, enhancing the user experience by indicating ongoing
+                        loading.
+                    </li>
+                    <li>
+                        <strong>Sidebar Toggling:</strong>
+                        Added functionality for a sidebar menu toggled by a menu button click. An event listener was
+                        added to
+                        the menu button to show or hide the sidebar.
+                    </li>
+                    <li>
+                        <strong>Smooth Scrolling:</strong>
+                        Implemented a smooth scrolling effect for navigating back to the top of the page by adding a
+                        scroll-to-top button. JavaScript was used to smoothly scroll the window to the top when the
+                        button was
+                        clicked.
+                    </li>
+                    <li>
+                        <strong>Toggle Display of Lab Reports:</strong>
+                        Created three JavaScript functions (`display_cover`, `display_report1`, and `display_report3`)
+                        to manage the display state of different lab reports: <br>
+                        <strong>display_cover:</strong>
+                        Toggles the display of the element with ID `report_cover` and an associated arrow icon
+                        (`arrow_up`). <br>
+                        <strong>display_report1:</strong>
+                        Toggles the display of the element with ID `lab_report1` and an associated arrow icon. <br>
+                        <strong>display_report3:</strong>
+                        Toggles the display of the element with ID `lab_report3` and an associated arrow icon.
+                    </li>
+                </ol>
+
+
+                <h2 id="color">Results:</h2>
+                <p>The implementation of these JavaScript functionalities resulted in a significantly more interactive
+                    web
+                    application: <br>
+                    <strong>Form Validation:</strong> Users receive immediate feedback for incorrect login credentials,
+                    enhancing
+                    security
+                    and usability. <br>
+                    <strong>Preloader Management:</strong> The preloader visually indicates the loading status,
+                    improving the user
+                    experience. <br>
+                    <strong>Sidebar Toggling:</strong> The sidebar can be easily shown or hidden, making navigation more
+                    intuitive. <br>
+                    <strong>Smooth Scrolling:</strong> Provides a visually appealing and user-friendly navigation
+                    method. <br>
+                    <strong>Toggle Display of Lab Reports:</strong> Users can selectively view or hide specific lab
+                    reports, improving
+                    organization and readability.
+                </p>
+
+                <h2 id="color">Discussion:</h2>
+                Implementing these JavaScript functionalities significantly improved the interactivity and usability of
+                the web application. Each functionality addressed specific needs: <br>
+                <strong>Form Validation:</strong> Prevents incorrect data submission and enhances security. <br>
+                <strong>Preloader Management:</strong> Improves user experience by visually indicating loading status.
+                <br>
+                <strong>Sidebar Toggling:</strong> Enhances navigation efficiency and accessibility. <br>
+                <strong>Smooth Scrolling:</strong> Provides a seamless navigation method. <br>
+                <strong>Toggle Display of Lab Reports:</strong> Organizes content more effectively and allows users to
+                focus on one
+                report at a time.
+
+                <p>Future improvements could include adding more complex JavaScript functionalities, such as AJAX for
+                    dynamic content loading, integrating third-party APIs for additional features, and implementing
+                    client-side data storage using localStorage or sessionStorage. Animations for smoother transitions
+                    when
+                    showing or hiding content and visual feedback for the active report section could further enhance
+                    the
+                    user experience.</p>
+
+                <h2 id="color">Conclusion:</h2>
+                <p>This lab demonstrated the power of JavaScript in enhancing web interactivity and user experience. By
+                    integrating functionalities such as form validation, preloader management, sidebar toggling, smooth
+                    scrolling, and toggling the display of lab reports, the web application became more interactive,
+                    user-friendly, and efficient. Further exploration into advanced JavaScript techniques and libraries
+                    will
+                    allow for even more sophisticated web applications.</p>
+
+                <h2 id="color">References:</h2>
+                <ul>
+                    <li>[MDN Web Docs - JavaScript]<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                            target="_blank">https://developer.mozilla.org/en-US/docs/Web/JavaScript</a></li>
+
+                    <li>[W3Schools - JavaScript Tutorial] <a href="https://www.w3schools.com/js/"
+                            target="_blank">https://www.w3schools.com/js/</a></li>
+
+                    <li>[CSS-Tricks - Smooth Scrolling]<a
+                            href="https://css-tricks.com/snippets/jquery/smooth-scrolling/"
+                            target="_blank">https://css-tricks.com/snippets/jquery/smooth-scrolling/</a></li>
+
+                    <li>[MDN Web Docs - Document Object Model
+                        (DOM)]<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model"
+                            target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model</a>
+                    </li>
+
+                    <li>[JavaScript.info - Event Listeners]<a href="https://javascript.info/introduction-browser-events"
+                            target="_blank">https://javascript.info/introduction-browser-events</a></li>
+                </ul>
+            </div>
+            <img style="margin-bottom: 8px;" src="{% static 'assets/javascript.jpg' %}" alt="Javascript">
+        </div>
+        <!-- lab report 3 -->
+    </div>
+
+    <span id="arrow_up" onclick="scrollToTop()">
+        <img src="{% static 'assets/arrow-up-square-fill.svg' %}" alt="Arrow Up">
+    </span>
+
+    <script>
+        // lab reports display and hide
+        function display_cover() {
+            var cover = document.getElementById("report_cover");
+            var arrow_up = document.getElementById("arrow_up");
+
+            if (cover.style.display === "none") {
+                cover.style.display = "block";
+                arrow_up.style.display = "block";
+            } else {
+                cover.style.display = "none";
+                arrow_up.style.display = "none";
+            }
+        }
+
+        function display_report1() {
+            var report1 = document.getElementById("lab_report1");
+            var arrow_up = document.getElementById("arrow_up");
+
+            if (report1.style.display === "none") {
+                report1.style.display = "block";
+                arrow_up.style.display = "block";
+            } else {
+                report1.style.display = "none";
+                arrow_up.style.display = "none";
+            }
+        }
+
+        function display_report3() {
+            var report3 = document.getElementById("lab_report3");
+            var arrow_up = document.getElementById("arrow_up");
+
+            if (report3.style.display === "none") {
+                report3.style.display = "block";
+                arrow_up.style.display = "block";
+            } else {
+                report3.style.display = "none";
+                arrow_up.style.display = "none";
+            }
+        }
+
+        // scroll to top script
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // preloader script
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                const preloader = document.getElementById('preloader');
+                preloader.style.display = 'none';
+            }, 1000);
+        });
+
+        // hide and display sidebar
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menuButton');
+            const sideMenu = document.getElementById('sideMenu');
+
+            menuButton.addEventListener('click', () => {
+                sideMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
